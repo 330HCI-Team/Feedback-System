@@ -1,0 +1,103 @@
+<html>
+<header>
+   <title>Feedback</title>
+   <link rel="stylesheet" type="text/css" href="form.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+</header>
+<body bgcolor="#fff5f9">
+<div id="screen">  
+<div>
+<button onclick="window.location.href='index.html'"><i class="material-icons"  > skip_previous</i></button>
+</div>
+<div>
+  <div>
+    <p>  Feedback Type: </p>
+  </div>
+  <div id="div1">
+  <form action="#">
+  <p>
+    <input type="radio" id="test1" name="radio-group" checked>
+    <label for="test1">Product</label>
+  </p>
+  <p>
+    <input type="radio" id="test2" name="radio-group">
+    <label for="test2">Service</label>
+  </p>
+  <p>
+    <input type="radio" id="test3" name="radio-group">
+    <label for="test3">Website</label>
+  </p>
+  <p>
+    <input type="radio" id="test4" name="radio-group">
+    <label for="test4">Other</label>
+  </p>
+</form>
+
+  </div>
+</div>
+<div>
+  <br><br><br><br><br><br><br><br><br><br><br>
+  <form>
+  Your Name:
+  <input type="text" name="name" required>
+  </form>
+</div>
+<div >
+  
+       
+    <button onclick="turn1()" id="check1">Leave Contect Information</button>
+</div>
+<div >
+ <form >
+  <select name="contectI" >
+    <option value="Phone">Phone</option>
+    <option value="E-Mail">E-Mail</option>
+  </select>
+  <br><br>
+ </form>
+</div>
+<div id="div2">
+  <form>
+  
+  <input type="text" name="contect" id = "input1" disabled required>
+  </form>
+</div>
+<div class="left_margin" id="div3">
+  
+  <button onclick="turnred()"><i class="material-icons" id="red">sentiment_very_dissatisfied</i></button>
+  <button onclick="turngreen()"><i class="material-icons" id="green">sentiment_very_satisfied</i></button> 
+  <button ><i class="material-icons" >attachment</i></button>   
+  <button ><i class="material-icons" >image</i></button> 
+ 
+  <form>
+  
+  <input type="text" id="inputform" name="context">
+  </form>
+  <button id="div4"><i class="material-icons" >arrow_forward</i></button> 
+</div>
+
+
+<form action="#">
+  <p>
+    <input type="radio" id="test1" name="radio-group" checked>
+    <label for="test1">Apple</label>
+  </p>
+  <p>
+    <input type="radio" id="test2" name="radio-group">
+    <label for="test2">Peach</label>
+  </p>
+  <p>
+    <input type="radio" id="test3" name="radio-group">
+    <label for="test3">Orange</label>
+  </p>
+</form>
+
+
+
+</div>
+<script src="form.js">
+
+</script>
+</body>
+</html>

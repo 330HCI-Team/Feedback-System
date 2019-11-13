@@ -1,0 +1,157 @@
+/* 
+	Global classes 
+					*/
+
+
+body {
+	
+	background-repeat: no-repeat;
+	font-family: Avenir, sans-serif;
+	margin: 0;
+	color: #575757;
+
+}
+
+
+#screen {                      
+	height: 800px;
+	width: 1200px;
+	margin: 100px 100px;
+
+}
+
+#inputform{
+	height: 430px;
+	width: 500px;
+
+
+
+}
+
+
+
+
+
+form{
+
+	border-color: coral
+
+}
+
+.left_margin {             /*   albums` names styling in albums.html  */
+  	float: left;
+  	margin-right: 10px;
+}
+
+#div1{
+	position: relative;
+	left:120px;top:-35px;
+}
+
+#div2{
+	position: relative;
+	left:95px;top:-58px;
+}
+
+#div3{
+	height: 800px;
+	width: 1200px;
+	position: relative;
+	left:700px;top:-620px;
+}
+
+#div4{
+	position: relative;
+	left:440px;
+}
+
+
+#att{
+
+	position: relative;
+	left:40px;
+}
+
+#check1{
+	border: 0px;
+	text-decoration: line-through;
+	background-color:transparent;
+	color: #575757;
+	padding-left: 0px;
+}
+
+button{
+	background-color: white;
+  	border: 2px solid grey;
+  	color: black;
+  	padding: 10px 15px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	margin: 4px 2px;
+  	cursor: pointer;
+
+}
+
+input{
+	border: 2px solid grey;
+  	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+select{
+	border: 2px solid grey;
+  	border-radius: 4px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #F87DA9;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}

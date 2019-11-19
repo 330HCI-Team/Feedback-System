@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* */
+.comWidth{
+	width: 1000px; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.leftArea{
+	float: left;
+}
+.rightArea{
+	float: right;
+}
+/*topBar*/
+.topBar{
+	height: 31px; 
+	background-color: #F7F7F7; 
+	line-height: 31px;
+}
+.collection{
+	background:url(../img/collection.png) left center no-repeat; 
+	padding-left:19px; 
+	font-weight: bold;
+}
+.topBar a:hover{
+	color: red;
+}
+/*logBar*/
+.logoBar{
+	height:85px; 
+	background-color: #1D7AD9;
+}
+.logo{
+	margin-left: -50px; 
+	padding-top: 13px; 
+	///*width: 100px; 
+	height: 23px;*/
+}
+/**/
+.search_box{
+	width: 430px;
+	padding-top: 23px; 
+	padding-left: 185px;
+}
+.search_text{
+	width: 350px;
+	height: 14px; 
+	line-height:14px; 
+	padding:11px 5px 10px; 
+	background-color: white; 
+}
+.search_btn{
+	width: 70px;
+	height: 35px;
+	font-size:14px; 
+	font-family: "MicrosoftYaHei" , "Î¢ÈíÑÅºÚ";
+	background-color:#FF8C00;
+	color: #FFF;
+	cursor: pointer;
+}
+/**/
+.shopCar {
+  width: 145px;
+  height: 35px;
+  background-color: #FF8C00;
+  margin-top: 23px;
+  font: 14px/35px "Î¢ÈíÑÅºÚ";
+  color: #fff;
+  margin-right: 59px;
+  display: inline;
+}
+.shopText {
+  height: 100%;
+  width: 87px;
+  border-right: #E27A00 solid 1px;
+  background: url(../img/shaoIcon.png) 10px center no-repeat;
+  text-indent: 40px;
+}
+
+/**/
+.navBox {
+	height: 35px;
+	background-color: #1369C0;
+	color: #fff;
+	font-family: "MicrosoftYaHei";
+}
+
+.shopClass{
+	width: 190px;
+	position: relative;
+}
+.shopClass h3{
+	line-height: 35px;
+	text-align: center;
+}
+.shopClasss i{
+	width: 11px;
+	height: 7px;
+	overflow: hidden;
+	display: inline-block;
+	margin-left: 11px;
+	background: url(../img/down.png) left center no-repeat;
+}
+
+.nav, .shopClass h3{
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+.nav{
+  line-height: 35px;
+}
+.nav li{
+	float: left;
+}
+.nav li a:hover{
+	background-color: #4593FD;
+}
+.nav a{
+	height: 35px;
+	display: inline-block;
+	padding:0 35px;
+	color: #fff;
+	border-right: #ccc solid 1px;
+}
+.nav .nobor {
+  border-right: none;
+}
+.nav .active {
+  background-color: #4593FD;
+}
+
+.shopClass_show {
+  background-color: #4593FD;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  width: 100%;
+}
+.shopClass_item {
+  padding: 14px 10px;
+  border-bottom: #3487F2 solid 1px;
+  border-top: #5AA1FE solid 1px;
+}
+.shopClass_item dt {
+  height: 22px;
+  background: url(../img/shop_sj.png) right center no-repeat;
+}
+.shopClass_item .b {
+  font: 14px/1 "Î¢ÈíÑÅºÚ";
+}
+.shopClass_item a {
+  color: #fff;
+}
+.shopClass_item a:hover {
+  text-decoration: underline;
+}
+
+
+
+.shopClass_active {
+  background-color: #fff;
+  border-left: #4593FD solid 1px;
+}
+.shopClass_active dt {
+  background: none;
+}
+.shopClass_active a {
+  color: #000;
+}
+
+
+.banner {
+  margin-bottom: 15px;
+}
+.banner_bar {
+  float: right;
+  position: relative;
+  overflow: hidden;
+}
+.imgBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.imgBox li {
+  float: left;
+}
+.imgBox img {
+  display: block;
+}
+.imgNum {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.imgNum a {
+  width: 20px;
+  height: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  display: inline-block;
+  margin: 0 3px;
+}
+.imgNum .active {
+  background-color: #FF7700;
+}
+.banner_big, .banner_big img {
+  width: 810px;
+  height: 340px;
+}
+.banner_big .imgBox {
+  width: 1620px;
+  height: 340px;
+}
+.banner_sm, .banner_sm img {
+  width: 190px;
+  height: 400px;
+}
+.banner_sm .imgBox {
+  width: 380px;
+  height: 400px;
+}
+.footer {
+  background-color: #D4D4D4;
+  text-align: center;
+  line-height: 24px;
+  padding: 50px 0;
+}
+.footer i {
+  font-style: normal;
+  margin: 0 5px;
+}
+.footer a {
+  color: #000;
+}
+.footer a:hover {
+  color: #F60;
+}
+.web {
+  padding-top: 30px;
+}
+.web img {
+  margin: 0 12px;
+}
+.hr_25 {
+  height: 25px;
+}

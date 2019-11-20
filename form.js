@@ -22,12 +22,15 @@ function turngreen(){
 }
 
 function turn1(){
+var checkBox = document.getElementById("test5");
+	  if (checkBox.checked == true){
+    		document.getElementById("input1").removeAttribute("disabled");}
+	  if (checkBox.checked == false){
+    		document.getElementById("input1").disabled = true;
+  }
 
-	
 
 
-		document.getElementById("check1").style.textDecoration="none";
-		document.getElementById("input1").removeAttribute("disabled");
 
 
 

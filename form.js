@@ -27,14 +27,26 @@ var checkBox = document.getElementById("test5");
     		document.getElementById("input1").removeAttribute("disabled");}
 	  if (checkBox.checked == false){
     		document.getElementById("input1").disabled = true;
-  }
-
-
-
-
 
 
 }
+}
+function turnforward(){
+
+	
+	var x;
+	var r=confirm("Are you sure to submit?");
+	if (r == true)	{
+		window.location.href='DataVisualization.html';
+	}
+
+
+}
+
+
+
+
+
 
 
 

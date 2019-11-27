@@ -12,14 +12,29 @@
 </header>
 <body>
 <div id="screen">
-    <div id="chart">
+    <div id="success">
+        Congratulations! <br>You have submitted the feedback successfully.
+    </div>
+    <div class="title">
         <button id='back' onclick="window.location.href='form.html'"><i class="material-icons"  > skip_previous</i></button>
+        Data from other users:
+    </div>
+    <div id="chart">
+        <div id="myDiv0"></div>
         <div id="myDiv"></div>
         <div id="myDiv2"></div>
         <div id="myDiv3"></div>
     </div>
     <div id="commentpart">
-        <div id="title">Latest Comments</div>
+        <div class="title">Latest Comments</div>
+        <div class="comment">
+            <div class="user">
+                <a id = "name">afdgsdfg</a>
+            </div>
+            <div class="content">
+                <a id = "feedback">aasfasdfasf</a>
+            </div>
+        </div>
         <div class="comment">
             <div class="user">
                 <a>Sblau:</a>
@@ -45,6 +60,7 @@
             </div>
         </div>
     </div>
+    <button id='moveforward' onclick="window.location.href='reward1.html'"><i class="material-icons"  > arrow_forward</i></button>
 <!--    <button id="Forward"><i class="material-icons" >arrow_forward</i></button>-->
 </div>
 <script src="Data.js">

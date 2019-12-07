@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> turning over cards</title>
+    <link href="styles/matchgame.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/function.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<body>
+
+<script type="text/javascript" src="scripts/htm5game.matchgame.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+
+<div class = "wrapper">
+    <div id = "introduction">
+        <p> Game Instruction: </p>
+        <p>Turn the card over, if two are same ,then they disappear</p>
+        <p>Or you can just just click the next button</p>
+    </div>
+<section id="game">
+    <div id="cards">
+        <div class="card">
+            <div class="face front"></div>
+            <div class="face back"></div>
+        </div>
+    </div>
+</section>
+<div class = "push"></div>
+    <button id="div4"><a href="reward.html"><i class="material-icons" >arrow_forward</i></a></button>
+    </div>
+<footer class = "footer"></footer>
+<!--<div id = "introduction">-->
+<!--    <p> Game Instruction: </p>-->
+<!--    <p>turn the card over, if two are same ,then they disappear</p>-->
+<!--    <p>Or you can just just click the next button</p>-->
+<!--</div>-->
+
+
+<!--<div id="screen">-->
+<!--    <div>-->
+<!--        <button onclick="window.location.href='index.html'"><i class="material-icons"  > skip_previous</i></button>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <div>-->
+<!--            <p>  Feedback Type: </p>-->
+<!--        </div>-->
+<!--        <div id="div1">-->
+<!--            <form action="#">-->
+<!--                <p>-->
+<!--                    <input type="radio" id="test1" name="radio-group" checked>-->
+<!--                    <label for="test1">Product</label>-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <input type="radio" id="test2" name="radio-group">-->
+<!--                    <label for="test2">Service</label>-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <input type="radio" id="test3" name="radio-group">-->
+<!--                    <label for="test3">Website</label>-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <input type="radio" id="test4" name="radio-group">-->
+<!--                    <label for="test4">Other</label>-->
+<!--                </p>-->
+<!--            </form>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div>-->
+<!--        <br><br><br><br><br><br><br><br><br><br><br>-->
+<!--        <form>-->
+<!--            Your Name:-->
+<!--            <input type="text" name="name" required>-->
+<!--        </form>-->
+<!--        <br><br>-->
+<!--        <form>-->
+<!--            Your phone:-->
+<!--            <input type="text" name = "phone" required>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--    <div id="div6">-->
+<!--&lt;!&ndash;    <div >&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;        <button onclick="turn1()" id="check1">Leave Contect Information</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    <div >-->
+<!--        <form >-->
+<!--            <select name="contectI" >-->
+<!--                <option value="Phone">Phone</option>-->
+<!--                <option value="E-Mail">E-Mail</option>-->
+<!--            </select>-->
+<!--            <br><br>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--    <div id="div2">-->
+<!--        <form>-->
+
+<!--            <input type="text" name="contect" id = "input1" disabled required>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--    <div class="left_margin" id="div3">-->
+
+<!--        <button onclick="turnred()"><i class="material-icons" id="red">sentiment_very_dissatisfied</i></button>-->
+<!--        <button onclick="turngreen()"><i class="material-icons" id="green">sentiment_very_satisfied</i></button>-->
+<!--        <button ><i class="material-icons" >attachment</i></button>-->
+<!--        <button ><i class="material-icons" >image</i></button>-->
+
+<!--        <form>-->
+
+<!--            <input type="text" id="inputform" name="context">-->
+<!--        </form>-->
+<!--        <P id="reward2"> finish "two same cards game " submit to get coupon?</P>-->
+<!--        <button id="div4"><a href="reward.html"><i class="material-icons" >arrow_forward</i></a></button>-->
+<!--        <form action="#">-->
+<!--            <p>-->
+<!--                <input type="radio" id="test1" name="radio-group" checked>-->
+<!--                <label for="test1">coupon1</label>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <input type="radio" id="test2" name="radio-group">-->
+<!--                <label for="test2">coupon2</label>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <input type="radio" id="test3" name="radio-group">-->
+<!--                <label for="test3">coupon3</label>-->
+<!--            </p>-->
+<!--        </form>-->
+<!--    </div>-->
+
+<script type="text/javascript">
+    $(function(){
+        //实现随机洗牌
+        neusoft.matchingGame.deck.sort(shuffle);
+        //alert(neusoft.matchingGame.deck);
+        var $card=$(".card");
+        for(var i= 0;i<11;i++)
+        {
+            $card.clone().appendTo($("#cards"));
+        }
+        //对每张牌进行设置
+        $(".card").each(function(index)
+        {
+            //调整坐标
+            $(this).css({
+                "left":(neusoft.matchingGame.cardWidth+20)*(index%4)+"px",
+                "top":(neusoft.matchingGame.cardHeight+20)*Math.floor(index/4)+"px"
+            });
+            //吐出一个牌号
+            var pattern=neusoft.matchingGame.deck.pop();
+            //暂存牌号
+            $(this).data("pattern",pattern);
+            //把其翻牌后的对应牌面附加上去
+            $(this).find(".back").addClass(pattern);
+            //点击牌的功能函数挂接
+            $(this).click(selectCard);
+        });
+    });
+</script>
+
+<div style="text-align:center;clear:both;">
+    <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+    <script src="/follow.js" type="text/javascript"></script>
+</div>
+<script src="scripts/function.js">
+</script>
+</body>
+</html>

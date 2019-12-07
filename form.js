@@ -22,16 +22,31 @@ function turngreen(){
 }
 
 function turn1(){
-
-	
-
-
-		document.getElementById("check1").style.textDecoration="none";
-		document.getElementById("input1").removeAttribute("disabled");
-
+var checkBox = document.getElementById("test5");
+	  if (checkBox.checked == true){
+    		document.getElementById("input1").removeAttribute("disabled");}
+	  if (checkBox.checked == false){
+    		document.getElementById("input1").disabled = true;
 
 
 }
+}
+function turnforward(){
+
+	
+	var x;
+	var r=confirm("Are you sure to submit?");
+	if (r == true)	{
+		window.location.href='DataVisualization.html';
+	}
+
+
+}
+
+
+
+
+
 
 
 
